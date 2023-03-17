@@ -1,0 +1,31 @@
+theme = "varua"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+C-f = "move_char_right"
+C-b = "move_char_left"
+C-k = "signature_help"
+
+[keys.normal]
+g =     { d = "goto_definition", o= ["vsplit", "goto_definition"] }
+space = { b = { k =  ":buffer-close", b = "buffer_picker"} }
+F2 = ":w" 
+";" = "buffer_picker"
+C-k = "signature_help"
+# C-g = ["insert_mode", "normal_mode"]
+C-g = ["collapse_selection"]
+C-e = ["scroll_down"]
+
+[editor.lsp]
+auto-signature-help = false
